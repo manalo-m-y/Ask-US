@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">Ask<span>US</span></div>
+    <div class="container" id="container"> 
+        <div class="font-container register-container">
+        <form action="#">
+            <h1>Register here</h1>
+            <div class="input-container">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Username">
+            </div>
+            <div class="input-container">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email">
+            </div>
+
+            <div class="input-container">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Password" pattern=".{8}" title="Password must be 8 characters">
+                
+            </div>
+            <div class="input-container">
+               <i class="fa-solid fa-lock"></i>
+               <input type="password" placeholder="Confirm Password" pattern=".{8}" title="Password must be 8 characters">
+               
+            </div>
+            <button>Register</button>
+            <span>or sign up with</span>
+            <div class="social-container"> 
+                <a href="#" class="social">
+                    <i class="fab fa-google-plus"></i>
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-container login-container">
+
+        <form action="Landing.html">
+            <h1>Login here</h1>
+            <div class="input-container">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-container">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Password" pattern=".{8}" title="Password must be 8 characters">
+            </div>
+            <div class="content">
+                <div class="checkbox">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <label>Remember me</label>
+                </div>
+                <div class="pass-link">
+                    <a href="#" class="forpass"> Forgot password</a>
+                </div>
+             </div>
+
+            <button>Login</button>
+            <span>or login with</span>
+            <div class="social-container">
+                <a href="#" class="social">
+                    <i class="fab fa-google-plus"></i>
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1 class="title">Hey, <br> Friend!</h1>
+                <p>we're here to listen to you! if you have an account, you can login here and start interacting!</p>
+                <button class="ghost" id="login"> Login
+                    <i class="fa-solid fa-arrow-left"></i>
+                   
+                </button>
+            </div>
+
+            <div class="overlay-panel overlay-right">
+                <h1 class="title">Needed some <br> safe space?</h1>
+                <p>we're here for you! if you don't have an account, you can register here.</p>
+                <button class="ghost" id="register">Sign up
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+        </div>
+    </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
