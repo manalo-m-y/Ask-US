@@ -9,14 +9,14 @@
 }
 
 :root{
-    --body-color: #fff;
+    --body-color: #fcf5ff;
     --sidebar-color: #FFF;
-    --primary-color: #695CFE;
+    --primary-color: #7E60BF;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #1e1e1e;
 
-    --tran-03: all 0.2s ease;
+    --tran-02: all 0.2s ease;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
     --tran-05: all 0.5s ease;
@@ -25,46 +25,53 @@
 body{
     height: 100vh;
     background: var(--body-color);
+    transition: var(--tran-02);
+    
 }
 
 body.dark{
     --body-color: #18191A;
-    --sidebar-color: #242526;
+    --sidebar-color: #3A3B3C;
     --primary-color: #3A3B3C;
     --primary-color-light: #3A3B3C;
     --toggle-color: #FFF;
-    --text-color: #CCC;
+    --text-color: #e9e9e9;
 }
 
 .sidebar .text {
     font-size: 16px;
     font-weight: 500;
     color: var(--text-color);
-    transition: var(--tran-05);
+    
 }
 
 .sidebar .image{
     min-width: 60px;
     display: flex;
     align-items: center;
+
+}
+
+.sidebar header .header-text .profession{
+    font-size: 10px;
+    text-indent: 15px;
 }
 
 .sidebar{
     position: fixed;
     top: 0;
+    background: var(--sidebar-color);
     left: 0;
     height: 100%;
     width: 250px;
     padding: 10px 14px;
-    background: var(--sidebar-color);
-    transition: var(--tran-05);
     z-index: 100;
 }
 
 .sidebar li{
     height: 50px;
-    background: rgb(255, 255, 255);
-    margin-top: 10px;   
+    background: transparent;
+    margin: 10px;
     list-style: none;
     display: flex;
     align-items: center;
@@ -79,16 +86,19 @@ body.dark{
     font-size: 20px;
 }
 
-.sidebar li .icon, .sidebar li .text{
+.sidebar li .icon, 
+.sidebar li .text{
     color: var(--text-color);
+    transition: var(--tran-02);
 }
 
 .sidebar header{
     position: relative;
+    margin-top: 40px;
 }       
 
 .sidebar .image-text img{
-    width: 40px;
+    width: 100px;
     border-radius: 6px;
 }
 
@@ -106,10 +116,6 @@ header .image-text .header-text{
     font-weight: 800;
 }
 
-.header-text .proffession{
-    margin-top: -2px;
-}
-
 .sidebar header .toggle{
     position: absolute;
     top: 50%;
@@ -120,28 +126,53 @@ header .image-text .header-text{
     background-color: var(--primary-color);
     color: var(--sidebar-color);
     border-radius: 50%;
-    display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     color: var(--sidebar-color);
     font-size: 22px;
-    transition: var(--tran-03);
+    display: none;
 }
 
 .sidebar .search-box{
-    background: var(--primary-color-light);
+    background: var(#3A3B3C);
+    margin-top: 30px;
 }
 
-.search-box input{
+
+
+.search-box {
+    position: relative;
+    margin-top: 30px;
+}
+
+.search-box input {
+    background: var(--body-color);
     height: 40px;
     width: 100%;
     outline: none;
     border: none;
     border-radius: 6px;
-    padding: 0 15px;
+    padding: 0 15px 0 50px; /* Adjust padding for icon */
     font-size: 15px;
-    background: var(--primary-color-light);
+    color: var(--text-color);
+}
+
+.search-box i {
+    position: absolute;
+    top: 50%;
+    justify-content: space-around;
+    transform: translateY(-50%);
+    color: var(--text-color);
+}
+
+body.dark .search-box input {
+    color: var(--text-color);
+}
+
+.space-between-menu{
+    height: 100px;
+    width: 20px;
 }
 
 .sidebar li a{
@@ -151,5 +182,105 @@ header .image-text .header-text{
     display: flex;
     align-items: center;
     border-radius: 6px;
-    transition: var(--tran-04);
+    background: var(--sidebar-color);
+    
+}
+
+.sidebar li a .bx-log-out{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    min-width: 50px;
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.sidebar .nav-link .logout-text{
+    margin-top: 300px;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    background: var(--primary-color-light);
+    color: var(--text-color);
+}
+
+.sidebar li a:hover{
+    background: var(--primary-color);
+}
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
+    color: var(--sidebar-color);
+}
+body.dark .sidebar li a:hover {
+    background: var(--toggle-color);
+    color: var(--primary-color);
+}
+.sidebar .menu-bar{
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    background: var(--primary-color-light);
+    background: transparent; 
+}
+
+.menu-bar .mode{
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    top: 800px;
+    background: var(--primary-color-light);
+}
+
+.menu-bar .mode .moon-sun{
+    height: 50px;
+    width: 60px;
+    display: flex;  
+    align-items: center;
+}
+
+.menu-bar .mode .i{
+    position: absolute;
+}
+
+.menu-bar .mode .i .sun{
+    opacity: 0;
+}
+
+.menu-bar .mode .toggle-switch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 60px;
+    cursor: pointer;
+    
+}
+
+.toggle-switch .switch{
+    position: relative;
+    height: 22px;
+    width: 40px;
+    border-radius: 25px;
+    background: var(--toggle-color)
+}
+
+.switch::before{ 
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background: var(--sidebar-color);
+    transition: var(--tran-03);
+}
+
+body.dark .switch::before{
+    left: 24px;
 }

@@ -40,6 +40,7 @@ body {
     -webkit-text-stroke: 2px #7E60BF;
     text-shadow: 0 0 0.3125rem rgba(0, 0, 0, 0.4);
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    font-weight: 800;
 }
 
 h1 {

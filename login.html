@@ -19,23 +19,25 @@
             <h1>Register here</h1>
             <div class="input-container">
                 <i class="fa-solid fa-user"></i>
-                <input type="text" placeholder="Username">
+                <input type="text" placeholder="Username" required>
             </div>
             <div class="input-container">
                 <i class="fa-solid fa-envelope"></i>
-                <input type="email" placeholder="Email">
-            </div>
+                <input type="email" placeholder="Email" required>
+            </div>  
 
             <div class="input-container">
                 <i class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="Password" pattern=".{8}" title="Password must be 8 characters">
+                <input type="password" placeholder="Password" pattern=".{8}" title="Password must be 8 characters" required>
                 
             </div>
+
             <div class="input-container">
                <i class="fa-solid fa-lock"></i>
-               <input type="password" placeholder="Confirm Password" pattern=".{8}" title="Password must be 8 characters">
+               <input type="password" placeholder="Confirm Password" pattern=".{8}" title="Password must be 8 characters" required>
                
             </div>
+            
             <button>Register</button>
             <span>or sign up with</span>
             <div class="social-container"> 
@@ -52,11 +54,11 @@
             <h1>Login here</h1>
             <div class="input-container">
                 <i class="fa-solid fa-envelope"></i>
-                <input type="email" placeholder="Email">
+                <input type="email" placeholder="Email" required>
             </div>
             <div class="input-container">
                 <i class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="Password" pattern=".{8}" title="Password must be 8 characters">
+                <input type="password" placeholder="Password" pattern=".{8}" title="Password must be 8 characters" required>
             </div>
             <div class="content">
                 <div class="checkbox">
@@ -82,7 +84,7 @@
         <div class="overlay">
             <div class="overlay-panel overlay-left">
                 <h1 class="title">Hey, <br> Friend!</h1>
-                <p>we're here to listen to you! if you have an account, you can login here and start interacting!</p>
+                <p>Still wondering about things? If you have an existing account you can login here!</p>
                 <button class="ghost" id="login"> Login
                     <i class="fa-solid fa-arrow-left"></i>
                    
@@ -90,8 +92,8 @@
             </div>
 
             <div class="overlay-panel overlay-right">
-                <h1 class="title">Needed some <br> safe space?</h1>
-                <p>we're here for you! if you don't have an account, you can register here.</p>
+                <h1 class="title">Curious about <br>something?</h1>
+                <p>Do you wanna share anything? if you don't have an account, you can register here.</p>
                 <button class="ghost" id="register">Sign up
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
